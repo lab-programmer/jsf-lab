@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Form</title>
+</head>
+<body>
+
+<h2>Book Information</h2>
+
+<form th:action="@{/save}" th:object="${book}" method="post">
+
+    <input type="hidden" th:field="*{id}">
+
+    Title:
+    <input type="text" th:field="*{title}"><br><br>
+
+    Authors:
+    <input type="text" th:field="*{authors}"><br><br>
+
+    Edition:
+    <input type="text" th:field="*{edition}"><br><br>
+
+    Publication:
+    <input type="text" th:field="*{publication}"><br><br>
+
+    Price:
+    <input type="number" step="0.01" th:field="*{price}"><br><br>
+
+    <button type="submit">Save Book</button>
+
+</form>
+
+<br>
+<a href="/">Back to Book List</a>
+
+</body>
+</html>
